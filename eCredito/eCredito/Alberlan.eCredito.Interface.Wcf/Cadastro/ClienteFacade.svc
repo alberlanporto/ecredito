@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Alberlan.eCredito.Interface.Wcf.Cadastro.ClienteFacade" CodeBehind="ClienteFacade.svc.cs" %>

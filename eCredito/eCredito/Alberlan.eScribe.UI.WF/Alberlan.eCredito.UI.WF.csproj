@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{977381F7-9DB0-4801-84C8-1ED0A1F60484}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Alberlan.eCredito.UI.WF</RootNamespace>
+    <AssemblyName>Alberlan.eCredito.UI.WF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculoFinancimanto\frmCalculoFinanciamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculoFinancimanto\frmCalculoFinanciamento.Designer.cs">
+      <DependentUpon>frmCalculoFinanciamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Servico.Cadastro.Cliente\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Servico.Cadastro.TipoFinanciamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Servico.CalculoFinanciamento.Financiamento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CalculoFinancimanto\frmCalculoFinanciamento.resx">
+      <DependentUpon>frmCalculoFinanciamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\Alberlan.eCredito.Interface.DTO.Cadastro.ClienteDTO.datasource" />
+    <None Include="Properties\DataSources\Alberlan.eCredito.Interface.DTO.Cadastro.TipoFinanciamentoDTO.datasource" />
+    <None Include="Properties\DataSources\Alberlan.eCredito.Interface.DTO.CalculoFinanciamento.CalculoFinanciamentoDTO.datasource" />
+    <None Include="Properties\DataSources\Alberlan.eCredito.Interface.DTO.CalculoFinanciamento.FinanciamentoDTO.datasource" />
+    <None Include="Properties\DataSources\Alberlan.eCredito.Interface.DTO.CalculoFinanciamento.ValidacaoDTO.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\Servico.Cadastro.Cliente\ClienteFacade.wsdl" />
+    <None Include="Service References\Servico.Cadastro.Cliente\ClienteFacade.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.Cadastro.Cliente\ClienteFacade1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.Cadastro.Cliente\ClienteFacade2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\TipoFinanciamentoFacade.wsdl" />
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\TipoFinanciamentoFacade.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\TipoFinanciamentoFacade1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\TipoFinanciamentoFacade2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\FinanciamentoFacade.wsdl" />
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\FinanciamentoFacade.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\FinanciamentoFacade1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\FinanciamentoFacade2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Alberlan.eCredito.Interface.DTO\Alberlan.eCredito.Interface.DTO.csproj">
+      <Project>{9aaeda73-3ee0-4ae4-a24b-c96e07f80eb1}</Project>
+      <Name>Alberlan.eCredito.Interface.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Servico.Cadastro.Cliente\" />
+    <WCFMetadataStorage Include="Service References\Servico.Cadastro.TipoFinanciamento\" />
+    <WCFMetadataStorage Include="Service References\Servico.CalculoFinanciamento.Financiamento\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.Cliente\ClienteFacade.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.Cliente\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.Cliente\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.Cliente\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\TipoFinanciamentoFacade.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.Cadastro.TipoFinanciamento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\FinanciamentoFacade.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Servico.CalculoFinanciamento.Financiamento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

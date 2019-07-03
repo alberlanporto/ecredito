@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fbeee5a5a1f442e89017115536adc7cb" Name="Diagram1">
+        <EntityTypeShape EntityType="DBeCreditoModelo.Cliente" Width="2.625" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBeCreditoModelo.Financiamento" Width="2" PointX="4.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBeCreditoModelo.Parcela" Width="2" PointX="7.125" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBeCreditoModelo.TipoFinanciamento" Width="2.375" PointX="3.875" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="DBeCreditoModelo.FK_TB_FINANCIAMENTO_TB_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="DBeCreditoModelo.FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO" ManuallyRouted="false" />
+        <AssociationConnector Association="DBeCreditoModelo.FK_TB_PARCELA_TB_FINANCIAMENTO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

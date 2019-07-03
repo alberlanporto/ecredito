@@ -1,0 +1,14 @@
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.Wcf.dll.config
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.Wcf.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.Wcf.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Dominio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.Comum.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.DTO.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Repositorio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Dominio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.Comum.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Interface.DTO.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\bin\Alberlan.eCredito.Repositorio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\obj\Debug\Alberlan.eCredito.Interface.Wcf.csprojResolveAssemblyReference.cache
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\obj\Debug\Alberlan.eCredito.Interface.Wcf.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.Wcf\obj\Debug\Alberlan.eCredito.Interface.Wcf.pdb

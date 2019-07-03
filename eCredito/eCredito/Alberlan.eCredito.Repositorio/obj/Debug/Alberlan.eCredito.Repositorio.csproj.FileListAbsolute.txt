@@ -1,0 +1,12 @@
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Repositorio.dll.config
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Repositorio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Repositorio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\EntityFramework.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\EntityFramework.xml
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\obj\Debug\Alberlan.eCredito.Repositorio.csprojResolveAssemblyReference.cache
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\obj\Debug\Alberlan.eCredito.Repositorio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\obj\Debug\Alberlan.eCredito.Repositorio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Dominio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Dominio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Interface.DTO.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Repositorio\bin\Debug\Alberlan.eCredito.Interface.DTO.pdb

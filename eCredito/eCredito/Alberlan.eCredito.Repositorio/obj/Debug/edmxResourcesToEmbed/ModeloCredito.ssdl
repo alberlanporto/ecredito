@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBeCreditoModelo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="TB_CLIENTE">
+    <Key>
+      <PropertyRef Name="COD_CLIENTE" />
+    </Key>
+    <Property Name="COD_CLIENTE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_CLIENTE" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SGL_UF" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="NRO_CELULAR" Type="varchar" MaxLength="11" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_FINANCIAMENTO">
+    <Key>
+      <PropertyRef Name="ID_FINANCIAMENTO" />
+    </Key>
+    <Property Name="ID_FINANCIAMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TIPO_FINANCIAMENTO" Type="int" Nullable="false" />
+    <Property Name="COD_CLIENTE" Type="int" Nullable="false" />
+    <Property Name="VLR_TOTAL" Type="float" Nullable="false" />
+    <Property Name="QTD_PARCELA" Type="int" Nullable="false" />
+    <Property Name="DTA_CONTRATACAO" Type="date" Nullable="false" />
+    <Property Name="DTA_VENCIMENTO" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_PARCELA">
+    <Key>
+      <PropertyRef Name="ID_FINANCIAMENTO" />
+      <PropertyRef Name="NRO_PARCELA" />
+    </Key>
+    <Property Name="ID_FINANCIAMENTO" Type="int" Nullable="false" />
+    <Property Name="NRO_PARCELA" Type="int" Nullable="false" />
+    <Property Name="VLR_PARCELA" Type="float" Nullable="false" />
+    <Property Name="DTA_VENCIMENTO" Type="date" Nullable="false" />
+    <Property Name="DTA_PAGAMENTO" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TB_TIPO_FINANCIAMENTO">
+    <Key>
+      <PropertyRef Name="ID_TIPO_FINANCIAMENTO" />
+    </Key>
+    <Property Name="ID_TIPO_FINANCIAMENTO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DSC_TIPO_FINANCAMENTO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PER_TAXA" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TB_FINANCIAMENTO_TB_CLIENTE">
+    <End Role="TB_CLIENTE" Type="Self.TB_CLIENTE" Multiplicity="1" />
+    <End Role="TB_FINANCIAMENTO" Type="Self.TB_FINANCIAMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CLIENTE">
+        <PropertyRef Name="COD_CLIENTE" />
+      </Principal>
+      <Dependent Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="COD_CLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO">
+    <End Role="TB_TIPO_FINANCIAMENTO" Type="Self.TB_TIPO_FINANCIAMENTO" Multiplicity="1" />
+    <End Role="TB_FINANCIAMENTO" Type="Self.TB_FINANCIAMENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TIPO_FINANCIAMENTO">
+        <PropertyRef Name="ID_TIPO_FINANCIAMENTO" />
+      </Principal>
+      <Dependent Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="ID_TIPO_FINANCIAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PARCELA_TB_FINANCIAMENTO">
+    <End Role="TB_FINANCIAMENTO" Type="Self.TB_FINANCIAMENTO" Multiplicity="1" />
+    <End Role="TB_PARCELA" Type="Self.TB_PARCELA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="ID_FINANCIAMENTO" />
+      </Principal>
+      <Dependent Role="TB_PARCELA">
+        <PropertyRef Name="ID_FINANCIAMENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBeCreditoModeloStoreContainer">
+    <EntitySet Name="TB_CLIENTE" EntityType="Self.TB_CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_FINANCIAMENTO" EntityType="Self.TB_FINANCIAMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PARCELA" EntityType="Self.TB_PARCELA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_TIPO_FINANCIAMENTO" EntityType="Self.TB_TIPO_FINANCIAMENTO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TB_FINANCIAMENTO_TB_CLIENTE" Association="Self.FK_TB_FINANCIAMENTO_TB_CLIENTE">
+      <End Role="TB_CLIENTE" EntitySet="TB_CLIENTE" />
+      <End Role="TB_FINANCIAMENTO" EntitySet="TB_FINANCIAMENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO" Association="Self.FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO">
+      <End Role="TB_TIPO_FINANCIAMENTO" EntitySet="TB_TIPO_FINANCIAMENTO" />
+      <End Role="TB_FINANCIAMENTO" EntitySet="TB_FINANCIAMENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PARCELA_TB_FINANCIAMENTO" Association="Self.FK_TB_PARCELA_TB_FINANCIAMENTO">
+      <End Role="TB_FINANCIAMENTO" EntitySet="TB_FINANCIAMENTO" />
+      <End Role="TB_PARCELA" EntitySet="TB_PARCELA" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FinanciamentoFacade" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59588/CalculoFinanciamento/FinanciamentoFacade.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59588/CalculoFinanciamento/FinanciamentoFacade.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59588/CalculoFinanciamento/FinanciamentoFacade.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Alberlan.eCredito.Interface.DTO.CalculoFinanciamento" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFinanciamento_Consultar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Consultar" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Consultar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Incluir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Incluir" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Incluir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Editar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Editar" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Editar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Excluir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Excluir" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Excluir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_IncluirTodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirTodos" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_IncluirTodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirTodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Verificar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Verificar" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_Verificar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_SolicitarFinanciamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarFinanciamento" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_SolicitarFinanciamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarFinanciamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_ConfirmarFinanciamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarFinanciamento" />
+  </wsdl:message>
+  <wsdl:message name="IFinanciamento_ConfirmarFinanciamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmarFinanciamentoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFinanciamento">
+    <wsdl:operation name="Consultar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/Consultar" message="tns:IFinanciamento_Consultar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/ConsultarResponse" message="tns:IFinanciamento_Consultar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Incluir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/Incluir" message="tns:IFinanciamento_Incluir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/IncluirResponse" message="tns:IFinanciamento_Incluir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Editar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/Editar" message="tns:IFinanciamento_Editar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/EditarResponse" message="tns:IFinanciamento_Editar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/Excluir" message="tns:IFinanciamento_Excluir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/ExcluirResponse" message="tns:IFinanciamento_Excluir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirTodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/IncluirTodos" message="tns:IFinanciamento_IncluirTodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/IncluirTodosResponse" message="tns:IFinanciamento_IncluirTodos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Verificar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/Verificar" message="tns:IFinanciamento_Verificar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/VerificarResponse" message="tns:IFinanciamento_Verificar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarFinanciamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/SolicitarFinanciamento" message="tns:IFinanciamento_SolicitarFinanciamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/SolicitarFinanciamentoResponse" message="tns:IFinanciamento_SolicitarFinanciamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarFinanciamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFinanciamento/ConfirmarFinanciamento" message="tns:IFinanciamento_ConfirmarFinanciamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFinanciamento/ConfirmarFinanciamentoResponse" message="tns:IFinanciamento_ConfirmarFinanciamento_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFinanciamento" type="tns:IFinanciamento">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Consultar">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/Consultar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incluir">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/Incluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Editar">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/Editar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/Excluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirTodos">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/IncluirTodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Verificar">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/Verificar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarFinanciamento">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/SolicitarFinanciamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmarFinanciamento">
+      <soap:operation soapAction="http://tempuri.org/IFinanciamento/ConfirmarFinanciamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FinanciamentoFacade">
+    <wsdl:port name="BasicHttpBinding_IFinanciamento" binding="tns:BasicHttpBinding_IFinanciamento">
+      <soap:address location="http://localhost:59588/CalculoFinanciamento/FinanciamentoFacade.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

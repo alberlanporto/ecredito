@@ -1,0 +1,5 @@
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.DTO\bin\Debug\Alberlan.eCredito.Interface.DTO.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.DTO\bin\Debug\Alberlan.eCredito.Interface.DTO.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.DTO\obj\Debug\Alberlan.eCredito.Interface.DTO.csprojResolveAssemblyReference.cache
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.DTO\obj\Debug\Alberlan.eCredito.Interface.DTO.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Interface.DTO\obj\Debug\Alberlan.eCredito.Interface.DTO.pdb

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Alberlan.eCredito.Interface.DTO.CalculoFinanciamento" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Alberlan.eCredito.Interface.DTO.CalculoFinanciamento" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFinanciamentoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FinanciamentoDTO" nillable="true" type="tns:FinanciamentoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFinanciamentoDTO" nillable="true" type="tns:ArrayOfFinanciamentoDTO" />
+  <xs:complexType name="FinanciamentoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="Contratacao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipoFinanciamento" type="xs:int" />
+      <xs:element minOccurs="0" name="QtdeParcela" type="xs:int" />
+      <xs:element minOccurs="0" name="ValorTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="Vencimento" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FinanciamentoDTO" nillable="true" type="tns:FinanciamentoDTO" />
+  <xs:complexType name="ArrayOfValidacaoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidacaoDTO" nillable="true" type="tns:ValidacaoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidacaoDTO" nillable="true" type="tns:ArrayOfValidacaoDTO" />
+  <xs:complexType name="ValidacaoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Inconsistencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidacaoDTO" nillable="true" type="tns:ValidacaoDTO" />
+  <xs:complexType name="CalculoFinanciamentoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="DataContratacao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Parcelas" nillable="true" type="tns:ArrayOfParcelaDTO" />
+      <xs:element minOccurs="0" name="QtdeParcelas" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoFinanciamento" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalFinanciamento" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalJuros" type="xs:double" />
+      <xs:element minOccurs="0" name="Validacoes" nillable="true" type="tns:ArrayOfValidacaoDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculoFinanciamentoDTO" nillable="true" type="tns:CalculoFinanciamentoDTO" />
+  <xs:complexType name="ArrayOfParcelaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParcelaDTO" nillable="true" type="tns:ParcelaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParcelaDTO" nillable="true" type="tns:ArrayOfParcelaDTO" />
+  <xs:complexType name="ParcelaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Pagamento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Valor" type="xs:double" />
+      <xs:element minOccurs="0" name="Vencimento" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParcelaDTO" nillable="true" type="tns:ParcelaDTO" />
+</xs:schema>

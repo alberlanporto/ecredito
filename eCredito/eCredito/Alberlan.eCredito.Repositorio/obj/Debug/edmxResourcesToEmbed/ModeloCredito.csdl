@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBeCreditoModelo" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Uf" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Celular" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Financiamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipoFinanciamento" Type="Int32" Nullable="false" />
+    <Property Name="CodCliente" Type="Int32" Nullable="false" />
+    <Property Name="ValorTotal" Type="Double" Nullable="false" />
+    <Property Name="QtdeParcela" Type="Int32" Nullable="false" />
+    <Property Name="Contratacao" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Vencimento" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="Parcela">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Numero" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Numero" Type="Int32" Nullable="false" />
+    <Property Name="Valor" Type="Double" Nullable="false" />
+    <Property Name="Vencimento" Type="DateTime" Nullable="false" />
+    <Property Name="Pagamento" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TipoFinanciamento">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PercentualTaxa" Type="Double" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TB_FINANCIAMENTO_TB_CLIENTE">
+    <End Role="TB_CLIENTE" Type="DBeCreditoModelo.Cliente" Multiplicity="1" />
+    <End Role="TB_FINANCIAMENTO" Type="DBeCreditoModelo.Financiamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CLIENTE">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="CodCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO">
+    <End Role="TB_TIPO_FINANCIAMENTO" Type="DBeCreditoModelo.TipoFinanciamento" Multiplicity="1" />
+    <End Role="TB_FINANCIAMENTO" Type="DBeCreditoModelo.Financiamento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_TIPO_FINANCIAMENTO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="IdTipoFinanciamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PARCELA_TB_FINANCIAMENTO">
+    <End Role="TB_FINANCIAMENTO" Type="DBeCreditoModelo.Financiamento" Multiplicity="1" />
+    <End Role="TB_PARCELA" Type="DBeCreditoModelo.Parcela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_FINANCIAMENTO">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TB_PARCELA">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBeCreditoEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ClienteCollection" EntityType="DBeCreditoModelo.Cliente" />
+    <EntitySet Name="FinanciamentoCollection" EntityType="DBeCreditoModelo.Financiamento" />
+    <EntitySet Name="ParcelaCollection" EntityType="DBeCreditoModelo.Parcela" />
+    <EntitySet Name="TipoFinanciamentoCollection" EntityType="DBeCreditoModelo.TipoFinanciamento" />
+    <AssociationSet Name="FK_TB_FINANCIAMENTO_TB_CLIENTE" Association="Self.FK_TB_FINANCIAMENTO_TB_CLIENTE">
+      <End Role="TB_CLIENTE" EntitySet="ClienteCollection" />
+      <End Role="TB_FINANCIAMENTO" EntitySet="FinanciamentoCollection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO" Association="Self.FK_TB_FINANCIAMENTO_TB_TIPO_FINANCIAMENTO">
+      <End Role="TB_TIPO_FINANCIAMENTO" EntitySet="TipoFinanciamentoCollection" />
+      <End Role="TB_FINANCIAMENTO" EntitySet="FinanciamentoCollection" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PARCELA_TB_FINANCIAMENTO" Association="Self.FK_TB_PARCELA_TB_FINANCIAMENTO">
+      <End Role="TB_FINANCIAMENTO" EntitySet="FinanciamentoCollection" />
+      <End Role="TB_PARCELA" EntitySet="ParcelaCollection" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,11 @@
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.CalculoFinancimanto.frmCalculoFinanciamento.resources
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.csproj.GenerateResource.Cache
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\bin\Debug\Alberlan.eCredito.Interface.DTO.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\bin\Debug\Alberlan.eCredito.Interface.DTO.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\bin\Debug\Alberlan.eCredito.UI.WF.exe.config
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\bin\Debug\Alberlan.eCredito.UI.WF.exe
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\bin\Debug\Alberlan.eCredito.UI.WF.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.Properties.Resources.resources
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.exe
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eScribe.UI.WF\obj\Debug\Alberlan.eCredito.UI.WF.csprojResolveAssemblyReference.cache

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBeCreditoModeloStoreContainer" CdmEntityContainer="DBeCreditoEntities1">
+    <EntitySetMapping Name="ClienteCollection">
+      <EntityTypeMapping TypeName="DBeCreditoModelo.Cliente">
+        <MappingFragment StoreEntitySet="TB_CLIENTE">
+          <ScalarProperty Name="Codigo" ColumnName="COD_CLIENTE" />
+          <ScalarProperty Name="Nome" ColumnName="NOM_CLIENTE" />
+          <ScalarProperty Name="Uf" ColumnName="SGL_UF" />
+          <ScalarProperty Name="Celular" ColumnName="NRO_CELULAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinanciamentoCollection">
+      <EntityTypeMapping TypeName="DBeCreditoModelo.Financiamento">
+        <MappingFragment StoreEntitySet="TB_FINANCIAMENTO">
+          <ScalarProperty Name="Id" ColumnName="ID_FINANCIAMENTO" />
+          <ScalarProperty Name="IdTipoFinanciamento" ColumnName="ID_TIPO_FINANCIAMENTO" />
+          <ScalarProperty Name="CodCliente" ColumnName="COD_CLIENTE" />
+          <ScalarProperty Name="ValorTotal" ColumnName="VLR_TOTAL" />
+          <ScalarProperty Name="QtdeParcela" ColumnName="QTD_PARCELA" />
+          <ScalarProperty Name="Contratacao" ColumnName="DTA_CONTRATACAO" />
+          <ScalarProperty Name="Vencimento" ColumnName="DTA_VENCIMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParcelaCollection">
+      <EntityTypeMapping TypeName="DBeCreditoModelo.Parcela">
+        <MappingFragment StoreEntitySet="TB_PARCELA">
+          <ScalarProperty Name="Id" ColumnName="ID_FINANCIAMENTO" />
+          <ScalarProperty Name="Numero" ColumnName="NRO_PARCELA" />
+          <ScalarProperty Name="Valor" ColumnName="VLR_PARCELA" />
+          <ScalarProperty Name="Vencimento" ColumnName="DTA_VENCIMENTO" />
+          <ScalarProperty Name="Pagamento" ColumnName="DTA_PAGAMENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoFinanciamentoCollection">
+      <EntityTypeMapping TypeName="DBeCreditoModelo.TipoFinanciamento">
+        <MappingFragment StoreEntitySet="TB_TIPO_FINANCIAMENTO">
+          <ScalarProperty Name="Id" ColumnName="ID_TIPO_FINANCIAMENTO" />
+          <ScalarProperty Name="Descricao" ColumnName="DSC_TIPO_FINANCAMENTO" />
+          <ScalarProperty Name="PercentualTaxa" ColumnName="PER_TAXA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

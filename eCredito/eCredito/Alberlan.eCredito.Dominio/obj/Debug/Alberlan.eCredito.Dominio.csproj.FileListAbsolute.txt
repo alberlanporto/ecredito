@@ -1,0 +1,4 @@
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Dominio\bin\Debug\Alberlan.eCredito.Dominio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Dominio\bin\Debug\Alberlan.eCredito.Dominio.pdb
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Dominio\obj\Debug\Alberlan.eCredito.Dominio.dll
+D:\Pessoal\Alberlan\Safra\eCredito\eCredito\Alberlan.eCredito.Dominio\obj\Debug\Alberlan.eCredito.Dominio.pdb
